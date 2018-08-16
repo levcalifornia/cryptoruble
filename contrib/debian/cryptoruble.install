@@ -1,0 +1,7 @@
+contrib/debian/cru usr/bin
+contrib/debian/cryptoruble.conf var/lib/cru/.cryptoruble
+contrib/debian/cryptorubled.service lib/systemd/system
+contrib/debian/cryptorubled.logrotate etc/logrotate.d
+usr/local/bin/cryptorubled usr/bin
+usr/local/bin/cryptoruble-cli usr/bin
+usr/local/bin/cryptoruble-tx usr/bin

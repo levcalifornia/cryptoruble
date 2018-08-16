@@ -1,0 +1,26 @@
+#!/bin/bash
+
+set -e
+. /usr/share/debconf/confmodule
+
+case "$1" in
+  configure)
+    sed -i -e "s/\(^rpcpassword=MySuperPassword\)\(.*\)/rpcpassword=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)/" /var/lib/cru/.cryptoruble/cryptoruble.conf
+    chmod 600 /var/lib/cru/.cryptoruble/cryptoruble.conf
+    chown -R cru.cru /var/lib/cru/.cryptoruble /usr/bin/cryptoruble-cli
+    chmod 4750 /usr/bin/cryptoruble-cli
+    mkdir -p /etc/cryptoruble
+    ln -sf /var/lib/cru/.cryptoruble/cryptoruble.conf /etc/cryptoruble/cryptoruble.conf || true
+    ln -sf /etc/ssl/cru /etc/cryptoruble/certs || true
+    systcrutl daemon-reload
+    [ -f /var/tmp/cryptoruble-install.flag ] && {
+      rm -f /var/tmp/cryptoruble-install.flag
+      systcrutl enable cryptorubled
+    }
+    systcrutl status cryptorubled >/dev/null 2>&1 && systcrutl restart cryptorubled || {
+      systcrutl is-enabled cryptorubled >/dev/null 2>&1 && systcrutl start cryptorubled || true
+    }
+  ;;
+esac
+
+exit 0

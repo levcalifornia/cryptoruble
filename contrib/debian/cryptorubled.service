@@ -1,0 +1,14 @@
+[Unit]
+Description=Cryptoruble Wallet
+After=network.target
+
+[Service]
+Type=forking
+User=cru
+ExecStart=/usr/bin/cryptorubled -daemon -datadir=/var/lib/cru/.cryptoruble -conf=/var/lib/cru/.cryptoruble/cryptoruble.conf -pid=/var/lib/cru/.cryptoruble/cryptorubled.pid
+ExecStop=/usr/bin/cryptoruble-cli -datadir=/var/lib/cru/.cryptoruble stop
+PIDFile=/var/lib/cru/.cryptoruble/cryptorubled.pid
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

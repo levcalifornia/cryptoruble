@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+. /usr/share/debconf/confmodule
+
+case "$1" in
+  remove|deconfigure|abort-install)
+    rm -f /var/tmp/cryptoruble-install.flag
+    pkill -9 -u cru > /dev/null 2>&1 || true
+    getent passwd cru >/dev/null && userdel cru >/dev/null 2>&1 || true
+    rm -f /etc/ssl/cru/cryptoruble.key /etc/ssl/cru/cryptoruble.crt /etc/cryptoruble/cryptoruble.conf /etc/cryptoruble/certs
+  ;;
+esac
+
+exit 0

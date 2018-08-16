@@ -1,0 +1,7 @@
+contrib/trusty/cru usr/bin
+contrib/trusty/cryptoruble.conf var/lib/cru/.cryptoruble
+contrib/trusty/cryptorubled etc/init.d
+contrib/trusty/cryptorubled.logrotate etc/logrotate.d
+usr/local/bin/cryptorubled usr/bin
+usr/local/bin/cryptoruble-cli usr/bin
+usr/local/bin/cryptoruble-tx usr/bin

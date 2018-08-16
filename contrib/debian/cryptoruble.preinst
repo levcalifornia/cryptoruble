@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -e
+. /usr/share/debconf/confmodule
+
+case "$1" in
+  install)
+    getent passwd cru >/dev/null || {
+      groupadd -r cru && useradd -r -m -d /var/lib/cru -k /dev/null -s /bin/false -g cru cru
+    }
+    [ ! -f /etc/ssl/cru/cryptoruble.key ] || [ ! -f /etc/ssl/cru/cryptoruble.crt ] && {
+      mkdir -p /etc/ssl/cru
+      openssl req -nodes -x509 -newkey rsa:4096 -keyout /etc/ssl/cru/cryptoruble.key -out /etc/ssl/cru/cryptoruble.crt -days 3560 -subj /C=CY/L=Nicosia/O=Cryptoruble/CN=cryptoruble.local >/dev/null 2>&1
+      chown cru.cru /etc/ssl/cru/cryptoruble.key /etc/ssl/cru/cryptoruble.crt
+      chmod 600 /etc/ssl/cru/cryptoruble.key
+    }
+    touch /var/tmp/cryptoruble-install.flag
+  ;;
+esac
+
+exit 0
