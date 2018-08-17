@@ -3159,8 +3159,8 @@ na przykład: alertnotify=echo %%s | mail -s "Alarm Cryptoruble" admin@foo.com
         <translation>Błąd: Znaleziono nieprawidłowy argument -tor, użyj -onion.</translation>
     </message>
     <message>
-        <source>Fee (in RUB/Kb) to add to transactions you send (default: %s)</source>
-        <translation>Prowizja (w RUB za kB) dodawana do wysyłanej transakcji (domyślnie: %s)</translation>
+        <source>Fee (in CRUB/Kb) to add to transactions you send (default: %s)</source>
+        <translation>Prowizja (w CRUB za kB) dodawana do wysyłanej transakcji (domyślnie: %s)</translation>
     </message>
     <message>
         <source>Information</source>

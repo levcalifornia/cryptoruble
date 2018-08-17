@@ -27,7 +27,7 @@ CAmount CFeeRate::GetFee(size_t nSize) const
 
 std::string CFeeRate::ToString() const
 {
-    return strprintf("%d.%06d RUB/kB", nSatoshisPerK / COIN, nSatoshisPerK % COIN);
+    return strprintf("%d.%06d CRUB/kB", nSatoshisPerK / COIN, nSatoshisPerK % COIN);
 }
 
 CAmount GetMinFee(size_t nBytes)

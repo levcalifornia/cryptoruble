@@ -3043,12 +3043,12 @@
         <translation>Выполнить команду, когда приходит соответствующее сообщение о тревоге или наблюдается очень длинное расщепление цепи (%s в команде заменяется на сообщение)</translation>
     </message>
     <message>
-        <source>Fees (in RUB/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Комиссии (в RUB/Кб) меньшие этого значения считаются нулевыми для трансляции (по умолчанию: %s)</translation>
+        <source>Fees (in CRUB/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Комиссии (в CRUB/Кб) меньшие этого значения считаются нулевыми для трансляции (по умолчанию: %s)</translation>
     </message>
     <message>
-        <source>Fees (in RUB/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Комиссии (в RUB/Кб) меньшие этого значения считаются нулевыми для создания транзакции (по умолчанию: %s)</translation>
+        <source>Fees (in CRUB/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Комиссии (в CRUB/Кб) меньшие этого значения считаются нулевыми для создания транзакции (по умолчанию: %s)</translation>
     </message>
     <message>
         <source>If paytxfee is not set, include enough fee so transactions begin confirmation on average within n blocks (default: %u)</source>
@@ -3155,8 +3155,8 @@ rpcpassword=%s
         <translation>Ошибка: обнаружен неподдерживаемый параметр -tor, используйте -onion.</translation>
     </message>
     <message>
-        <source>Fee (in RUB/Kb) to add to transactions you send (default: %s)</source>
-        <translation>Комиссия (в RUB/Кб) для добавления к вашим транзакциям (по умолчанию: %s)</translation>
+        <source>Fee (in CRUB/Kb) to add to transactions you send (default: %s)</source>
+        <translation>Комиссия (в CRUB/Кб) для добавления к вашим транзакциям (по умолчанию: %s)</translation>
     </message>
     <message>
         <source>Information</source>

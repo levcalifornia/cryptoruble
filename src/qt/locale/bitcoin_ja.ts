@@ -3055,11 +3055,11 @@ Address: %4
         <translation>関連のアラートをもらってもすごく長いのフォークを見てもコマンドを実行 (コマンドの中にあるの%sはメッセージから置き換えさせる)</translation>
     </message>
     <message>
-        <source>Fees (in RUB/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <source>Fees (in CRUB/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
         <translation>中継の際、この値未満の手数料 (RUB/Kb単位) はゼロであるとみなす (デフォルト: %s)</translation>
     </message>
     <message>
-        <source>Fees (in RUB/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <source>Fees (in CRUB/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
         <translation>トランザクション作成の際、この値未満の手数料 (RUB/Kb単位) はゼロであるとみなす (デフォルト: %s)</translation>
     </message>
     <message>
@@ -3171,7 +3171,7 @@ rpcpassword=%s
         <translation>エラー: サポートされていない引数 -tor が見つかりました。-onion を使用してください。</translation>
     </message>
     <message>
-        <source>Fee (in RUB/Kb) to add to transactions you send (default: %s)</source>
+        <source>Fee (in CRUB/Kb) to add to transactions you send (default: %s)</source>
         <translation>送信するトランザクションに付加する手数料 (RUB/Kb単位) (初期値: %s)</translation>
     </message>
     <message>
