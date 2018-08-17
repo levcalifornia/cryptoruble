@@ -1,7 +1,7 @@
 Cryptoruble Core integration/staging tree
 =====================================
 
-cryptoru.info
+http://cryptoru.info
 
 What is Cryptoruble?
 ----------------
@@ -15,7 +15,7 @@ Proof-of-Work and Auxilary-Proof-of-Work mechanisms. **Cryptoruble** Core is the
 open source software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the **Cryptoruble Core** software, see [here](cryptoru.info).
+the **Cryptoruble Core** software, see [here](http://explorer.cryptoru.info/clients/).
 
 License
 -------
